@@ -1,7 +1,6 @@
-FROM registry.access.redhat.com/rhel7:latest
-MAINTAINER Takayoshi Kimura <tkimura@redhat.com>
-RUN yum-config-manager --disable \* > /dev/null && \
-    yum-config-manager --enable rhel-7-server-rpms > /dev/null
+FROM centos7
+
+
 RUN yum install -y tar && \
     yum clean all
 RUN cd /opt && \
